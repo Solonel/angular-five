@@ -5,16 +5,17 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService }  from './data/in-memory-data.service';
 import { AppRoutingModule }     from './app-routing.module';
 
 import { DashboardComponent }   from './dashboard/dashboard.component';
-import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
-import { HeroesComponent }      from './heroes/heroes.component';
-import { HeroSearchComponent }  from './hero-search/hero-search.component';
-import { HeroService }          from './hero.service';
-import { MessageService }       from './message.service';
+import { HeroDetailComponent }  from './heroes-cmp/hero-detail/hero-detail.component';
+import { HeroesComponent }      from './heroes-cmp/heroes/heroes.component';
+import { HeroSearchComponent }  from './heroes-cmp/hero-search/hero-search.component';
+import { HeroService }          from './services/hero.service';
+import { MessageService }       from './services/message.service';
 import { MessagesComponent }    from './messages/messages.component';
+import { AddRecipeComponent } from './recipes-cmp/add-recipe/add-recipe.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MessagesComponent }    from './messages/messages.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    AddRecipeComponent
   ],
   imports: [
     BrowserModule,
