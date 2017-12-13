@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Recipe } from '../classes/recipe';
+import { Ingredient } from '../classes/ingredient';
 import { MessageService } from './message.service';
 
 
@@ -14,28 +14,27 @@ const httpOptions = {
 };
 
 @Injectable()
-export class RecipeService {
+export class IngredientService {
 
-  private recipesUrl = 'api/recipes';  // URL to web api
+  private ingredientUrl = 'api/ingredient';  // URL to web api
 
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }
 
-  /** POST: add a new hero to the server */
-  addRecipe(recipe: Recipe): Observable<Recipe> {
-    return this.http.post<Recipe>(this.recipesUrl, recipe, httpOptions).pipe(
-      tap((recipe: Recipe) => this.log(`added recipe w/ id=${recipe.id}`)),
-      catchError(this.handleError<Recipe>('addRecipe'))
+  addIngredient(ingredient: Ingredient): Observable<Ingredient> {
+    return this.http.post<Ingredient>(this.ingredientUrl, ingredient, httpOptions).pipe(
+      tap((ingredient: Ingredient) => this.log(`added ingredient w/ id=${ingredient.id}`)),
+      catchError(this.handleError<Ingredient>('addHero'))
     );
   }
 
   /**
-   * Handle Http operation that failed.
-   * Let the app continue.
-   * @param operation - name of the operation that failed
-   * @param result - optional value to return as the observable result
-   */
+    * Handle Http operation that failed.
+    * Let the app continue.
+    * @param operation - name of the operation that failed
+    * @param result - optional value to return as the observable result
+    */
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

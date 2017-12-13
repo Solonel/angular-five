@@ -14,8 +14,11 @@ import { HeroesComponent }      from './heroes-cmp/heroes/heroes.component';
 import { HeroSearchComponent }  from './heroes-cmp/hero-search/hero-search.component';
 import { HeroService }          from './services/hero.service';
 import { MessageService }       from './services/message.service';
+import { RecipeService }       from './services/recipe.service';
+import { IngredientService }       from './services/ingredient.service';
 import { MessagesComponent }    from './messages/messages.component';
 import { AddRecipeComponent } from './recipes-cmp/add-recipe/add-recipe.component';
+import { AddIngredientComponent } from './add-ingredient/add-ingredient.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { AddRecipeComponent } from './recipes-cmp/add-recipe/add-recipe.componen
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    AddRecipeComponent
+    AddRecipeComponent,
+    AddIngredientComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,7 @@ import { AddRecipeComponent } from './recipes-cmp/add-recipe/add-recipe.componen
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
-  providers: [HeroService, MessageService],
+  providers: [HeroService, MessageService, RecipeService, IngredientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

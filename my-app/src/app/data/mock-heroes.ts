@@ -1,4 +1,6 @@
 import { Hero } from '../classes/hero';
+import { Ingredient } from '../classes/ingredient';
+import { Recipe } from '../classes/recipe';
 
 export const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -11,6 +13,144 @@ export const HEROES: Hero[] = [
   { id: 18, name: 'Dr IQ' },
   { id: 19, name: 'Magma' },
   { id: 20, name: 'Tornado' }
+];
+
+export const INGREDIENTS: Ingredient[] = [
+  {
+    id: 1,
+    label: "blancs de poulet",
+    description: ""
+  },
+  {
+    id: 2,
+    label: "pot de crème fraîche allégée",
+    description: ""
+  },
+  {
+    id: 3,
+    label: "Curry",
+    description: ""
+  },
+  {
+    id: 4,
+    label: "Cumin",
+    description: ""
+  },
+  {
+    id: 5,
+    label: "Piment",
+    description: ""
+  },
+  {
+    id: 6,
+    label: "Poivre",
+    description: ""
+  },
+  {
+    id: 7,
+    label: "Sel",
+    description: ""
+  },
+  {
+    id: 8,
+    label: "chocolat à pâtisser noir",
+    description: ""
+  },
+  {
+    id: 9,
+    label: "beurre",
+    description: ""
+  },
+  {
+    id: 10,
+    label: "oeufs",
+    description: ""
+  },
+  {
+    id: 11,
+    label: "farine",
+    description: ""
+  },
+  {
+    id: 12,
+    label: "sucre en poudre",
+    description: ""
+  }
+];
+
+
+
+export const RECIPES: Recipe[] = [
+  {
+    id: 1,
+    title: "Poulet curry et oignons facile",
+    description: "",
+    ingredient: [{
+      id: 1,
+      label: "blancs de poulet",
+      description: ""
+    },
+    {
+      id: 2,
+      label: "pot de crème fraîche allégée",
+      description: ""
+    },
+    {
+      id: 3,
+      label: "Curry",
+      description: ""
+    },
+    {
+      id: 4,
+      label: "Cumin",
+      description: ""
+    },
+    {
+      id: 5,
+      label: "Piment",
+      description: ""
+    },
+    {
+      id: 6,
+      label: "Poivre",
+      description: ""
+    },
+    {
+      id: 7,
+      label: "Sel",
+      description: ""
+    }]
+  },
+  {
+    id: 2,
+    title: "Gâteau au chocolat fondant rapide",
+    description: "",
+    ingredient: [{
+      id: 8,
+      label: "chocolat à pâtisser noir",
+      description: ""
+    },
+    {
+      id: 9,
+      label: "beurre",
+      description: ""
+    },
+    {
+      id: 10,
+      label: "oeufs",
+      description: ""
+    },
+    {
+      id: 11,
+      label: "farine",
+      description: ""
+    },
+    {
+      id: 12,
+      label: "sucre en poudre",
+      description: ""
+    }]
+  }
 ];
 
 
