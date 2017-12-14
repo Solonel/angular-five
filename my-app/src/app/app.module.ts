@@ -18,7 +18,7 @@ import { RecipeService }       from './services/recipe.service';
 import { IngredientService }       from './services/ingredient.service';
 import { MessagesComponent }    from './messages/messages.component';
 import { AddRecipeComponent } from './recipes-cmp/add-recipe/add-recipe.component';
-import { AddIngredientComponent } from './add-ingredient/add-ingredient.component';
+import { AddIngredientComponent } from './ingredient-cmp/add-ingredient/add-ingredient.component';
 
 @NgModule({
   declarations: [

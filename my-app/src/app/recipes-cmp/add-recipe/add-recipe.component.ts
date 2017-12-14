@@ -15,13 +15,13 @@ export class AddRecipeComponent implements OnInit {
 
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
+ // add(name: string): void {
+     ///name = name.trim();
+    //if (!name) { return; }
 
 
-    this.recipeService.addRecipe({ name } as Recipe)
-  }
+   // this.recipeService.addRecipe({ name } as Recipe)
+ // }
 
 }
 
